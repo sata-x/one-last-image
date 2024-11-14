@@ -134,7 +134,7 @@
 				</div> -->
 				<div class="label-box range-box" style="padding:10px 0 4px;">
 					<div class="head">
-						<b>线迹轻重</b>
+						<b>太さ</b>
 						<span v-text="style.darkCut"></span>
 					</div>
 					<input type="range" v-model.number="style.darkCut"
@@ -142,7 +142,7 @@
 				</div>
 				<div class="label-box range-box">
 					<div class="head">
-						<b>调子数量</b>
+						<b>トーン数</b>
 						<span v-text="style.shadeLimit"></span>
 					</div>
 					<input type="range" v-model.number="style.shadeLimit"
@@ -167,29 +167,9 @@
 						<span v-text="style.hueGroup"></span>
 				</div> -->
 			</div>
-			<div class="tips-box">
-				<p>
-					建议上传
-					<b>赛璐珞风格</b> 的 
-					<b>动画截图</b>、<b>插画</b>
-					等，效果最佳
-				</p>
-				<p>
-					高清图请务必
-					<a @click="style.denoise = false">关闭降噪</a>
-					线条更精致
-				</p>
-				<p>
-					也可以
-					<a @click="saveDiff()">生成对比图</a>
-					方便分享
-				</p>
-				<!-- <p>
-					移动端请使用
-					<b>自带浏览器</b>
-					进行保存
-				</p> -->
-			</div>
+
+
+			
 		</div>
 	</div>
 	<div class="loading-box" v-show="loading" @animationEnd.salf="init()">
