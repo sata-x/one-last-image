@@ -97,11 +97,11 @@ const Convolutes = {
 	// 	0, -1, 0
 	// ],
 	// '极细':   creatConvoluteAverage(3),
-	'精细':  creatConvoluteAverage(5),
-	'一般':  creatConvoluteAverage(7),
-	'稍粗':  creatConvoluteAverage(9),
-	'超粗':  creatConvoluteAverage(11),
-	'极粗':  creatConvoluteAverage(13),
+	'繊細':  creatConvoluteAverage(5),
+	'デフォルト':  creatConvoluteAverage(7),
+	'やや粗い':  creatConvoluteAverage(9),
+	'非常に粗い':  creatConvoluteAverage(11),
+	'極めて粗い':  creatConvoluteAverage(13),
 	// '12421': [
 	// 	-3,2,-3,
 	// 	 2,4, 2,
