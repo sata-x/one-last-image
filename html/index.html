@@ -39,14 +39,14 @@
 		<div class="ctrl-box">
 			<button class="btn"
 				:class="{current: !isDefaultImageURL}"
-				@click="chooseFile()">选择图片</button>
+				@click="chooseFile()">インポート</button>
 			<a class="btn" 
 				:class="{current: isDefaultImageURL}"
 				@click="save()" 
 				:href="output"
 				:disabled="runing"
 				:download="downloadFilename"
-				v-text="runing?'生成中…':'保存图片'"
+				v-text="runing?'生成中…':'エクスポート'"
 				></a>
 			<!-- <button @click="louvre()" class="generator-btn"></button> -->
 			<div class="config-box">
@@ -78,7 +78,7 @@
 				</div> -->
 				<div style="padding:14px 0;">
 					<!-- <ui-switch v-model="style.cover">方形</ui-switch> -->
-					<ui-switch v-model="style.denoise" @input="_louvre(50)">降噪</ui-switch>
+					<ui-switch v-model="style.denoise" @input="_louvre(50)">ノイズリダクション</ui-switch>
 					<ui-switch v-model="style.kuma" @input="_louvre(50)">Kiss</ui-switch>
 					<!-- <ui-switch v-model="style.shade" :disabled="!style.kuma" @input="_louvre(50)">调子</ui-switch> -->
 					<ui-switch v-model="style.watermark" @input="_louvre(50)">透かし</ui-switch>
@@ -208,7 +208,6 @@
 				<a :href="output">链接形式跳转到图片</a>
 			</p> -->
 			<p>手机端保存失败时可尝试长按图片 <b>“添加到照片”</b></p>
-			<p>如果能在发布生成图时，标注当前项目信息会很开心🤒</p>
 			<div class="ctrl-box">
 				<button class="btn current" @click="output = ''">关闭窗口</button>
 			</div>
