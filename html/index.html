@@ -2,9 +2,10 @@
 <html lang="zh-CN" data-loading="true">
 <head>
 <meta charset="UTF-8">
-<title>One Last Image</title>
+<title>One Last Image - 卢浮宫生成器 - One Last Kiss 风格 封面生成 图片转线稿 - 神奇海螺实验室</title>
 <link rel="stylesheet" href="document.css">
 <meta name="viewport" content="width=device-width,user-scalable=0">
+<meta name="description" content="One Last Kiss 卢浮宫生成器 风格 图片转线稿 封面生成 宇多田光 神奇海螺实验室">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="apple-touch-icon" href="icon.jpg">
@@ -17,6 +18,8 @@
 		<h1>
 			One Last Image
 		</h1>
+		<!-- <p>One Last Kiss 风格 图片转线稿 封面生成器</p> -->
+		<!-- <img src="../one-last-image-logo-color.png"> -->
 	</header>
 	<div class="main-box">
 		<div class="preview-box" 
@@ -39,14 +42,14 @@
 		<div class="ctrl-box">
 			<button class="btn"
 				:class="{current: !isDefaultImageURL}"
-				@click="chooseFile()">画像をインポートする</button>
+				@click="chooseFile()">选择图片</button>
 			<a class="btn" 
 				:class="{current: isDefaultImageURL}"
 				@click="save()" 
 				:href="output"
 				:disabled="runing"
 				:download="downloadFilename"
-				v-text="runing?'生成中...':'画像をエクスポートする'"
+				v-text="runing?'生成中…':'保存图片'"
 				></a>
 			<!-- <button @click="louvre()" class="generator-btn"></button> -->
 			<div class="config-box">
@@ -55,7 +58,7 @@
 					<input type="range" v-model.number="style.light"
 						min="-100" max="100" step=".1">
 					<span v-text="style.light"></span>
-				</div> -->				
+				</div> -->
 		<!-- 
 				<div class="label-box">
 					<b>s</b>
@@ -77,10 +80,10 @@
 					</label>
 				</div> -->
 				<div style="padding:14px 0;">
-					<<ui-switch v-model="style.cover">方形</ui-switch>
+					<!-- <ui-switch v-model="style.cover">方形</ui-switch> -->
 					<ui-switch v-model="style.denoise" @input="_louvre(50)">降噪</ui-switch>
 					<ui-switch v-model="style.kuma" @input="_louvre(50)">Kiss</ui-switch>
-					<<ui-switch v-model="style.shade" :disabled="!style.kuma" @input="_louvre(50)">调子</ui-switch>
+					<!-- <ui-switch v-model="style.shade" :disabled="!style.kuma" @input="_louvre(50)">调子</ui-switch> -->
 					<ui-switch v-model="style.watermark" @input="_louvre(50)">水印</ui-switch>
 					<ui-switch v-model="style.hajimei" :disabled="!style.watermark" @input="_louvre(50)">初回</ui-switch>
 				</div>
@@ -263,7 +266,7 @@
 	</div>
 </div>
 
-<script src="vue.2.6.11.min.js"></script>
+<script src="/vue.2.6.11.min.js"></script>
 <script src="color.js"></script>
 <script src="lyric.js"></script>
 <!-- <script src="bezier-easing.js"></script> -->
