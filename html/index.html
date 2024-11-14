@@ -84,7 +84,7 @@
 					<ui-switch v-model="style.denoise" @input="_louvre(50)">降噪</ui-switch>
 					<ui-switch v-model="style.kuma" @input="_louvre(50)">Kiss</ui-switch>
 					<!-- <ui-switch v-model="style.shade" :disabled="!style.kuma" @input="_louvre(50)">调子</ui-switch> -->
-					<ui-switch v-model="style.watermark" @input="_louvre(50)">水印</ui-switch>
+					<ui-switch v-model="style.watermark" @input="_louvre(50)">透かし</ui-switch>
 					<ui-switch v-model="style.hajimei" :disabled="!style.watermark" @input="_louvre(50)">初回</ui-switch>
 				</div>
 				<!-- <div class="label-box">
@@ -232,14 +232,6 @@
 		</div>
 	</div>
 	<footer>
-		<!-- <a href="https://www.bilibili.com/video/BV1Sg411w7T9" target="_blank">MV</a>
-		<hr> -->
-		<a href="https://lab.magiconch.com/magi/" target="_blank">Magi</a>
-		<a href="https://lab.magiconch.com/eva-title/" target="_blank">标题生成器</a>
-		<a href="https://v.magiconch.com/mine-sweeper" target="_blank">扫雷</a>
-		<br>
-		<a href="https://github.com/itorr/one-last-image" target="_blank">GitHub</a>
-		<a href="https://lab.magiconch.com" target="_blank">神奇海螺实验室</a>
 		<a href="https://weibo.com/1197780522/M19X18EGP" target="_blank">@卜卜口</a>
 	</footer>
 
@@ -266,7 +258,7 @@
 	</div>
 </div>
 
-<script src="/vue.2.6.11.min.js"></script>
+<script src="vue.2.6.11.min.js"></script>
 <script src="color.js"></script>
 <script src="lyric.js"></script>
 <!-- <script src="bezier-easing.js"></script> -->
