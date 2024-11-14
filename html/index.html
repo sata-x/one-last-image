@@ -2,7 +2,7 @@
 <html lang="zh-CN" data-loading="true">
 <head>
 <meta charset="UTF-8">
-<title>One Last Image - 卢浮宫生成器 - One Last Kiss 风格 封面生成 图片转线稿 - 神奇海螺实验室</title>
+<title>One Last Image</title>
 <link rel="stylesheet" href="document.css">
 <meta name="viewport" content="width=device-width,user-scalable=0">
 <meta name="description" content="One Last Kiss 卢浮宫生成器 风格 图片转线稿 封面生成 宇多田光 神奇海螺实验室">
@@ -18,8 +18,6 @@
 		<h1>
 			One Last Image
 		</h1>
-		<!-- <p>One Last Kiss 风格 图片转线稿 封面生成器</p> -->
-		<!-- <img src="../one-last-image-logo-color.png"> -->
 	</header>
 	<div class="main-box">
 		<div class="preview-box" 
@@ -42,14 +40,14 @@
 		<div class="ctrl-box">
 			<button class="btn"
 				:class="{current: !isDefaultImageURL}"
-				@click="chooseFile()">选择图片</button>
+				@click="chooseFile()">インポート</button>
 			<a class="btn" 
 				:class="{current: isDefaultImageURL}"
 				@click="save()" 
 				:href="output"
 				:disabled="runing"
 				:download="downloadFilename"
-				v-text="runing?'生成中…':'保存图片'"
+				v-text="runing?'生成中…':'エクスポート'"
 				></a>
 			<!-- <button @click="louvre()" class="generator-btn"></button> -->
 			<div class="config-box">
@@ -84,7 +82,7 @@
 					<ui-switch v-model="style.denoise" @input="_louvre(50)">降噪</ui-switch>
 					<ui-switch v-model="style.kuma" @input="_louvre(50)">Kiss</ui-switch>
 					<!-- <ui-switch v-model="style.shade" :disabled="!style.kuma" @input="_louvre(50)">调子</ui-switch> -->
-					<ui-switch v-model="style.watermark" @input="_louvre(50)">水印</ui-switch>
+					<ui-switch v-model="style.watermark" @input="_louvre(50)">透かし</ui-switch>
 					<ui-switch v-model="style.hajimei" :disabled="!style.watermark" @input="_louvre(50)">初回</ui-switch>
 				</div>
 				<!-- <div class="label-box">
