@@ -2,6 +2,8 @@
 
 # One Last Image
 
+Copyright (c) 2022 卜卜口
+
 ## 元のGitHubリポジトリ
 https://github.com/itorr/one-last-image
 
