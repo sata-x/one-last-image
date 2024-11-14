@@ -97,11 +97,11 @@ const Convolutes = {
 	// 	0, -1, 0
 	// ],
 	// '极细':   creatConvoluteAverage(3),
-	'繊細':  creatConvoluteAverage(5),
+	'デリケート':  creatConvoluteAverage(5),
 	'デフォルト':  creatConvoluteAverage(7),
-	'やや粗い':  creatConvoluteAverage(9),
-	'非常に粗い':  creatConvoluteAverage(11),
-	'極めて粗い':  creatConvoluteAverage(13),
+	'スライトリーラフ':  creatConvoluteAverage(9),
+	'ベリーラフ':  creatConvoluteAverage(11),
+	'エクストリームリーラフ':  creatConvoluteAverage(13),
 	// '12421': [
 	// 	-3,2,-3,
 	// 	 2,4, 2,
@@ -128,12 +128,12 @@ const Convolutes = {
 	// 	-1 ,  0 ,  0 ,  0 , -1 ,
 	// 	-1 , -1 , -1 , -1 , -1 ,
 	// ],
-	'浮雕': [
+	'レリーフ': [
 		1, 1, 1,
 		1, 1, -1,
 		-1, -1, -1
 	],
-	'线稿':  null,
+	'ライン':  null,
 }
 
 const style = {
